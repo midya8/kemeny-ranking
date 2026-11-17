@@ -1,6 +1,6 @@
-# OrderLab
+# Kemeny ranking
 
-OrderLab combines complete rankings into a total order with the least weighted
+Kemeny ranking combines complete rankings into a total order with the least weighted
 pairwise disagreement. Supply strict rankings and integer multiplicities, then
 compare exact Kemeny optima with an adjacent-swap local search. A local search
 can stop even when a better order exists.
