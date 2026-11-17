@@ -18,5 +18,7 @@ class Page(HTMLParser):
 Page().feed((ROOT/'docs/index.html').read_text())
 for f in ['README.md','METHOD.md','SOURCES.md','VALIDATION.md','LICENSE','requirements-reference.txt','.github/workflows/ci.yml','pyproject.toml']:
  assert(ROOT/f).is_file(),f
-assert 'orderlab' in (ROOT/'docs/index.html').read_text().lower()
+page = (ROOT/'docs/index.html').read_text()
+assert 'https://github.com/midya8/kemeny-ranking' in page
+assert 'kemeny ranking' in page.lower()
 print(json.dumps(dict(control_assets=len(cs),example_files=len(cs),source='deterministic native controls',checks='pass')))
